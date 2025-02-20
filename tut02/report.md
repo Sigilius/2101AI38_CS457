@@ -106,9 +106,9 @@ RSA (Rivest-Shamir-Adleman) is a widely used asymmetric cryptographic algorithm 
 | 512 bytes    | 0.1728              | 131.7794            |
 | 1024 bytes   | 0.3512              | 261.0404            |
 
-![image1](plot.png)
+![image1](tut02/plot.png)
 
-![image2](plot2.png)
+![image2](tut02/plot2.png)
 
 ## Optimization Strategies
 | Optimization                  | Description                                                      |
