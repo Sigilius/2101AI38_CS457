@@ -1,0 +1,24 @@
+-- Database creation
+CREATE DATABASE IF NOT EXISTS auth_system;
+USE auth_system;
+
+-- User table with role information
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('admin', 'editor', 'viewer') DEFAULT 'viewer'
+);
+
+-- Student information table
+CREATE TABLE stud_info (
+    roll INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT,
+    branch VARCHAR(50),
+    hometown VARCHAR(100)
+);
+
+-- Insert an initial admin user (password: admin123)
+INSERT INTO users (username, password, role) 
+VALUES ('admin', '$2y$10$zKKcil6yFOcObv7H.lPGk.oJv9aqlIaecz5ILURj01FR0XtsX2o6.', 'admin');
